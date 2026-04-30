@@ -1,6 +1,5 @@
 let currentH, currentS, currentL;
 
-// Load palette immediately when page opens
 window.onload = function() {
     displayPalette();
 };
@@ -24,11 +23,9 @@ function adjustLight(amount) {
 }
 
 function updateUI() {
-    // Calculate HSL
     const hslColor = `hsl(${currentH}, ${currentS}%, ${currentL}%)`;
     document.body.style.backgroundColor = hslColor;
     
-    // Convert to Hex for display
     const hex = hslToHex(currentH, currentS, currentL);
     document.getElementById('hex-display').innerText = hex;
 }
@@ -66,7 +63,6 @@ function goBack() {
     document.body.style.backgroundColor = "#fdfcfb";
 }
 
-// Helper function to turn HSL into HEX
 function hslToHex(h, s, l) {
     l /= 100;
     const a = s * Math.min(l, 1 - l) / 100;
