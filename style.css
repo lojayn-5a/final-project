@@ -62,7 +62,6 @@ button {
 .palette-section { margin-top: 30px; }
 .palette-grid { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; }
 
-/* Swatches are circular */
 .swatch {
     width: 45px;
     height: 45px;
