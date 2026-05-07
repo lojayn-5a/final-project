@@ -13,35 +13,50 @@
         <h1 id="title">What's your color Base?</h1>
         
         <div class="base-options" id="base-selector">
-            <div class="option" onclick="initColor(340, 'Petal Pink', 'Bloom', 'Wilt')">
-                <div class="dot" style="background:#FFD1DC"></div>
+            <div class="option" onclick="initColor(340, 'Petal Pink', 'Bloom', 'Wilt', 'flower')">
+                <div class="svg-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 24 24" fill="none" stroke="#f4bed0" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 16.5A4.5 4.5 0 1 1 7.5 12 4.5 4.5 0 1 1 12 7.5a4.5 4.5 0 1 1 4.5 4.5 4.5 4.5 0 1 1-4.5 4.5"/><path d="M12 7.5V9"/><path d="M7.5 12H9"/><path d="M16.5 12H15"/><path d="M12 16.5V15"/><path d="m8 8 1.88 1.88"/><path d="M14.12 9.88 16 8"/><path d="m8 16 1.88-1.88"/><path d="M14.12 14.12 16 16"/></svg>
+                </div>
                 <span>Petal Pink</span>
             </div>
-            <div class="option" onclick="initColor(85, 'Matcha Green', 'Sprout', 'Harvest')">
-                <div class="dot" style="background:#E2F0CB"></div>
+
+            <div class="option" onclick="initColor(85, 'Matcha Green', 'Sprout', 'Harvest', 'leaf')">
+                <div class="svg-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 24 24" fill="none" stroke="#ddf4be" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="m6 8 1.75 12.28a2 2 0 0 0 2 1.72h4.54a2 2 0 0 0 2-1.72L18 8"/><path d="M5 8h14"/><path d="M7 15a6.47 6.47 0 0 1 5 0 6.47 6.47 0 0 0 5 0"/><path d="m12 8 1-6h2"/></svg>
+                </div>
                 <span>Matcha Green</span>
             </div>
-            <div class="option" onclick="initColor(260, 'Lavender', 'Dream', 'Twilight')">
-                <div class="dot" style="background:#D6D6F5"></div>
+
+            <div class="option" onclick="initColor(260, 'Lavender', 'Dream', 'Twilight', 'star')">
+                <div class="svg-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 24 24" fill="none" stroke="#d0bef4" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M14 9.536V7a4 4 0 0 1 4-4h1.5a.5.5 0 0 1 .5.5V5a4 4 0 0 1-4 4 4 4 0 0 0-4 4c0 2 1 3 1 5a5 5 0 0 1-1 3"/><path d="M4 9a5 5 0 0 1 8 4 5 5 0 0 1-8-4"/><path d="M5 21h14"/></svg>
+                </div>
                 <span>Lavender</span>
             </div>
-            <div class="option" onclick="initColor(50, 'Sun Yellow', 'Glow', 'Gold')">
-                <div class="dot" style="background:#FFF9C4"></div>
+
+            <div class="option" onclick="initColor(50, 'Sun Yellow', 'Glow', 'Sunset', 'sun')">
+                <div class="svg-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 24 24" fill="none" stroke="#f4ebbe" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+                </div>
                 <span>Sun Yellow</span>
             </div>
-            <div class="option" onclick="initColor(200, 'Cloud Blue', 'Shiner', 'Stormier')">
-                <div class="dot" style="background:#B3E5FC"></div>
+
+            <div class="option" onclick="initColor(200, 'Cloud Blue', 'Shiner', 'Stormier', 'cloud')">
+                <div class="svg-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 24 24" fill="none" stroke="#bee2f4" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/></svg>
+                </div>
                 <span>Cloud Blue</span>
             </div>
         </div>
 
         <div class="controls" id="controls" style="display: none;">
+            <div id="vibe-shape" class="vibe-preview"></div>
             <h2 id="hex-display">#FFFFFF</h2>
             <div class="button-group">
-                <button id="light-btn" onclick="adjustLight(7)">Lighter</button>
-                <button id="dark-btn" onclick="adjustLight(-7)">Darker</button>
+                <button id="light-btn">Lighter</button>
+                <button id="dark-btn">Darker</button>
             </div>
-            <button class="save-btn" onclick="saveToPalette()">Save to Palette</button>
+            <button class="save-btn" id="main-action-btn">Save to Palette</button>
             <p class="reset" onclick="goBack()">← Pick a new base</p>
         </div>
 
